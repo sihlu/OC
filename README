@@ -1,0 +1,9 @@
+    Ce code représente est l'API pour le site piquante
+
+    Pour faire fonctionner cette application il faut :
+    - créer un fichier .env avec les variables d'environnement suivantes :
+            DB_HOST=<serveur de la base MongoDB>
+            DB_USER=<Compte de connexion à la Base de Donnée>
+            DB_PASS=<Mot de passe du compte>
+            DB_NAME=<Nom de la base de donnée>
+            HTTPS=<Enable pour activer le mode HTTPS, les certificats et clés doivent figurer dans un dossier ssl>
