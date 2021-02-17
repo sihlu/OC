@@ -2,12 +2,13 @@
 const http = require('http');
 const app = require('./app');
 const fs = require('fs');
-
-const https_options = {
-  key: fs.readFileSync("ssl/privatekey.pem"),
- 
-  cert: fs.readFileSync("ssl/certificate.pem")
-};
+var  https_options = {};
+if (fs.existsSync("ssl/privatekey.pem") && fs.existsSync("ssl/certificate.pem")) {
+   https_options = {
+    key: fs.readFileSync("ssl/privatekey.pem"),
+    cert: fs.readFileSync("ssl/certificate.pem")
+  };
+}
 
 const normalizePort = val => {
   const port = parseInt(val, 10);
